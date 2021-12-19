@@ -37,7 +37,11 @@
     </div>
     <div class="mb-3">
         <label class="form-label">Qouta</label>
-        <input type="text" name="quota" class="form-control" required>
+        <select name="quota" class="form-control" id="">
+            <option value="200">PPKM LEVEL 1</option>
+            <option value="150">PPKM LEVEL 2</option>
+            <option value="100">PPKM LEVEL 3</option>
+        </select>
     </div>
     <button type="submit" class="btn btn-primary float-end">Submit</button>
 
