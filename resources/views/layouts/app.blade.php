@@ -24,33 +24,34 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Booking Kunjungan</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item">
-                    <a class="nav-link {{ request()->is('/') ? 'active' : ''}}" aria-current="page" href="/">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link {{ request()->is('booking*') ? 'active' : ''}}" href="{{route('booking.index')}}">Booking</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link {{ request()->is('session*') ? 'active' : ''}}" href="{{route('session.index')}}">Session</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link {{ request()->is('student*') ? 'active' : ''}}" href="{{route('student.index')}}">Student</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
         <main class="py-4">
             <div class="container">
+              <div class="card">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Booking Kunjungan</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                          <a class="nav-link {{ request()->is('/') ? 'active' : ''}}" aria-current="page" href="/">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link {{ request()->is('booking*') ? 'active' : ''}}" href="{{route('booking.index')}}">Booking</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link {{ request()->is('session*') ? 'active' : ''}}" href="{{route('session.index')}}">Session</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link {{ request()->is('student*') ? 'active' : ''}}" href="{{route('student.index')}}">Student</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
                 @yield('content')
             </div>
         </main>
